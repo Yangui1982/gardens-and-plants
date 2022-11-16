@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Gardens</h1>
+
+<div id="gardens">
+  <% @gardens.each do |garden| %>
+    <p><%= garden.name %></p>
+    <p> <%= garden.banner_url %></p>
+    <p>
+      <%= link_to "Show this garden", garden %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New garden", new_garden_path %>
